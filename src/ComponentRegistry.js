@@ -4,8 +4,8 @@ export class ComponentRegistry {
     _cbit = 0;
     _map = {};
 
-    register(clazz) {
-        const key = camelString(clazz.name);
+    register(clazz, key) {
+        // const key = camelString(clazz.name);
 
         clazz.prototype._ckey = key;
         clazz.prototype._cbit = BigInt(++this._cbit);

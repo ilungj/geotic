@@ -6,8 +6,8 @@ export class Engine {
     _components = new ComponentRegistry();
     _prefabs = new PrefabRegistry(this);
 
-    registerComponent(clazz) {
-        this._components.register(clazz);
+    registerComponent(clazz, key) {
+        this._components.register(clazz, key);
     }
 
     registerPrefab(data) {
